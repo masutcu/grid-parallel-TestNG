@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Single Thread All Test Cases" >
+    <test name="Tests" parallel="none">
+        <parameter name="browser" value="grid-chrome"/>
+        <!--grid dosyasını kullanmakiçin terminalde önce: cd src/test/resources/grid
+        sonra: java -jar selenium-server-4.14.0.jar standalone ile grid dosyası çalıştırıyoruz
+  -->
+        <classes>
+            <class name="tests.SearchStringTest"/>
+            <class name="tests.SearchNumberTest"/>
+        </classes>
+    </test>
+</suite>
