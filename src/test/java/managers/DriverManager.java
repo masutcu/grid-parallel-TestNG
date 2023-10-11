@@ -29,14 +29,21 @@ public class DriverManager {
                 case "grid-firefox":
                     FirefoxOptions firefoxOptions=new FirefoxOptions();
                     firefoxOptions.addArguments("start-maximized");
-                    driver=new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),firefoxOptions);
+                    driver=new RemoteWebDriver(new URL("http://192.168.1.59:4444"),firefoxOptions); //veya
+                   // driver=new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),firefoxOptions);
                     System.out.println("******* Selenium Grid Firefox **********");
                     break;
                 case "grid-chrome":
                     ChromeOptions chromeOptions=new ChromeOptions();
                     chromeOptions.addArguments("start-maximized");
-                    driver=new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),chromeOptions);
+                    driver=new RemoteWebDriver(new URL("http://192.168.1.59:4444"),chromeOptions);
                     System.out.println("******* Selenium Grid Chrome **********");
+                    break;
+                case "grid-edge":
+                    EdgeOptions edgeOptions=new EdgeOptions();
+                    edgeOptions.addArguments("start-maximized");
+                    driver=new RemoteWebDriver(new URL("http://192.168.1.59:4444"),edgeOptions);
+                    System.out.println("******* Selenium Grid Edge **********");
                     break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
